@@ -35,7 +35,7 @@ public class Uzduotis04 {
         System.out.printf("Kuno mases indeksas yra %.3f", kunoMasesIndeksas);
     }
 
-    private static double tikrinamArSkaicius(Scanner scanner) {
+    public static double tikrinamArSkaicius(Scanner scanner) {
         double skaicius = 0;
         while (skaicius == 0) {
             String tikrinamas = scanner.nextLine();
