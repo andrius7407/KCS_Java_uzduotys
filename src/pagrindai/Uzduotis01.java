@@ -1,3 +1,9 @@
+/*Parašyti programą kuri paprašytų vartotojo įvesti žodį ir jį iš karto atvaizduotų, tada vėl paprašytų įvesti kitą žodį,
+jį atvaizduotų, ir procesą kartotų tol, kol nebus įvestas žodis „pabaiga“.
+Patikrinkite ar įvestas žodžio ilgis yra lyginis ar ne tam panaudokite % operatoriu.
+Jei žodis yra lyginis atspausdinkite “Įvestas žodis  {įvestas_žodis} yra lyginis” ir šalia kokio ilgio yra žodis.
+Jei nelyginis “Įvestas žodis {įvestas_žodis} nelyginis” šalia jo ilgį. Taip suskaičiuokite kiek tame žodyje yra “a” raidžių.
+*/
 package pagrindai;
 
 import java.util.Scanner;
