@@ -17,7 +17,7 @@ public class Uzduotis01 {
 
     //prasome ivesti zodi ir ji atspausdiname
     private void kartojamasIvedimas(){
-        nutraukti:{
+
             Scanner scanner = new Scanner(System.in);
             String ivestasZodis = "zodis";
 
@@ -38,7 +38,7 @@ public class Uzduotis01 {
                     System.out.println(ivestasZodis + ", zodyje yra " + kiekYraA + " a raidziu");
                 }
             }
-        }
+
     }
     private int skaiciuotiRaidesA(String ivestasZodis){
         int kiekYraA = 0;
