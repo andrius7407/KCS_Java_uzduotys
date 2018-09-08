@@ -1,28 +1,38 @@
 package pagrindai;
 
+import pagrindai.uzduotis01.NustatytiArIvestuZodziuIlgisLyginis;
+import pagrindai.uzduotis02.ArYraPalindromas;
+import pagrindai.uzduotis03.RastiFigurosPlota;
+import pagrindai.uzduotis04.SkaiciuotiKMI;
+import pagrindai.uzduotis05.SkaiciuotiKuroVidurki;
+import pagrindai.uzduotis06.Calculator;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner((System.in));
-        System.out.println("Pasirinkite uzduoti nuo 1 iki 5");
+        System.out.println("Pasirinkite uzduoti nuo 1 iki 6");
         int pasirinkti = scanner.nextInt();
 
         switch (pasirinkti){
             case 1:
-                new Uzduotis01();
+                NustatytiArIvestuZodziuIlgisLyginis.kartojamasIvedimas();
                 break;
             case 2:
-                new Uzduotis02();
+                ArYraPalindromas.nustatytiArYraPalindromas();
                 break;
             case 3:
-                new Uzduotis03();
+                RastiFigurosPlota.rastiFigurosPlota();
                 break;
             case 4:
-                new Uzduotis04();
+                SkaiciuotiKMI.skaiciuotiKMI();
                 break;
             case 5:
-                new Uzduotis05();
+                SkaiciuotiKuroVidurki.skaiciuotiKuroVidurki();
+                break;
+            case 6:
+                Calculator.calculator();
                 break;
             default:
                 System.out.println("Klaida: tokios uzduoties nera");

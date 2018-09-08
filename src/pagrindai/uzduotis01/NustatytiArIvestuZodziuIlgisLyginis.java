@@ -4,19 +4,17 @@ Patikrinkite ar įvestas žodžio ilgis yra lyginis ar ne tam panaudokite % oper
 Jei žodis yra lyginis atspausdinkite “Įvestas žodis  {įvestas_žodis} yra lyginis” ir šalia kokio ilgio yra žodis.
 Jei nelyginis “Įvestas žodis {įvestas_žodis} nelyginis” šalia jo ilgį. Taip suskaičiuokite kiek tame žodyje yra “a” raidžių.
 */
-package pagrindai;
+package pagrindai.uzduotis01;
 
 import java.util.Scanner;
 
-public class Uzduotis01 {
+public class NustatytiArIvestuZodziuIlgisLyginis {
 
-    //konstruktorius
-    public Uzduotis01() {
-        kartojamasIvedimas();
+    private NustatytiArIvestuZodziuIlgisLyginis() {
     }
 
     //prasome ivesti zodi ir ji atspausdiname
-    private void kartojamasIvedimas(){
+    public static void kartojamasIvedimas(){
 
             Scanner scanner = new Scanner(System.in);
             String ivestasZodis = "zodis";
@@ -40,7 +38,7 @@ public class Uzduotis01 {
             }
 
     }
-    private int skaiciuotiRaidesA(String ivestasZodis){
+    private static int skaiciuotiRaidesA(String ivestasZodis){
         int kiekYraA = 0;
         for (int i = 0; i < ivestasZodis.length(); i++){
             if(ivestasZodis.charAt(i) == 'a'){

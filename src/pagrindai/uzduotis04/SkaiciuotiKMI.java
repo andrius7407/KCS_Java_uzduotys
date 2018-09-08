@@ -5,46 +5,42 @@ vykdomi skirtinguose metoduose. Papildykite programa, kad jei Jonukas įvestu ne
 pasakytu, kad blogai įvestas skaičius ir leistu pakartoti. Programa baigtu darbą tik tada kai abu
 skaičiai įvesti gerai ir kmi apskaičiuotas.
  */
-package pagrindai;
+package pagrindai.uzduotis04;
+
+import pagrindai.CommonFunctions;
 
 import java.util.Scanner;
 
-public class Uzduotis04 {
-    Scanner scanner = new Scanner(System.in);
-    double svoris;
-    double ugis;
-    double kunoMasesIndeksas;
+public class SkaiciuotiKMI {
+    private static Scanner scanner = new Scanner(System.in);
+    private static double svoris;
+    private static double ugis;
+    private static double kunoMasesIndeksas;
 
-    public Uzduotis04() {
+    private SkaiciuotiKMI() {
+    }
+
+    public static void skaiciuotiKMI() {
         ivedimas();
         skaiciavimasKMI();
         isvedimas();
     }
 
-    private void ivedimas() {
+    private static void ivedimas() {
         System.out.println("Iveskite svori 'kg'");
-        svoris = tikrinamArSkaicius(scanner);
+        String ivedimas = scanner.nextLine();
+        svoris = CommonFunctions.tikrinamArSkaicius(ivedimas, "Pakartokite svori");
         System.out.println("Iveskite ugi 'm,cm'");
-        ugis = tikrinamArSkaicius(scanner);
+        ivedimas = scanner.nextLine();
+        ugis = CommonFunctions.tikrinamArSkaicius(ivedimas, "Pakartokite ugi");
     }
 
-    private void skaiciavimasKMI() {
+    private static void skaiciavimasKMI() {
         kunoMasesIndeksas = svoris / Math.pow(ugis, 2);
     }
-    private void isvedimas(){
+    private static void isvedimas(){
         System.out.printf("Kuno mases indeksas yra %.3f", kunoMasesIndeksas);
     }
 
-    public static double tikrinamArSkaicius(Scanner scanner) {
-        double skaicius = 0;
-        while (skaicius == 0) {
-            String tikrinamas = scanner.nextLine();
-            try {
-                skaicius = Double.parseDouble(tikrinamas);
-            } catch (NumberFormatException e) {
-                System.out.println("Ivedete ne skaiciu, pakartokite");
-            }
-        }
-        return skaicius;
-    }
+
 }
